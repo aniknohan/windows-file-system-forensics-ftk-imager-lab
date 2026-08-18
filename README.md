@@ -96,3 +96,9 @@ Detailed walkthroughs and supporting forensic evidence will be organized in this
 ## Disclaimer
 
 This project was performed in a controlled laboratory environment for educational and portfolio purposes. All files, disks, and deletion activity were intentionally created for forensic analysis.
+
+## Author
+
+**Anik Nohan**
+
+Cybersecurity / SOC / Digital Forensics Portfolio
