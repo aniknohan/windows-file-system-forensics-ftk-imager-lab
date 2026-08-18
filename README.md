@@ -89,13 +89,35 @@ The laboratory followed this general forensic workflow:
 
 ## Project Documentation
 
-Detailed walkthroughs and supporting forensic evidence will be organized in this repository as the investigation is documented.
+The complete forensic workflow is documented across the following sections:
+
+| Section | Documentation |
+|---|---|
+| 01 | [Evidence Creation](docs/01-evidence-creation.md) |
+| 02 | [Controlled File Deletion](docs/02-controlled-file-deletion.md) |
+| 03 | [FTK Imager Evidence Loading](docs/03-ftk-imager-evidence-loading.md) |
+| 04 | [NTFS Forensic Analysis](docs/04-ntfs-forensic-analysis.md) |
+| 05 | [FAT32 Forensic Analysis](docs/05-fat32-forensic-analysis.md) |
+| 06 | [FAT16 Forensic Analysis](docs/06-fat16-forensic-analysis.md) |
+| 07 | [File-System Forensic Comparison](docs/07-file-system-forensic-comparison.md) |
+
+Each analysis section includes supporting screenshots collected during the FTK Imager examination.
+
+---
+
+## Key Findings
+
+The investigation demonstrated that deleted data can remain forensically recoverable across NTFS, FAT32, and FAT16 file systems. FTK Imager provided visibility into active files, deleted-file artifacts, file-system metadata, Recycle Bin data, hexadecimal content, and unallocated space.
+
+NTFS provided a more detailed file-system and metadata structure, while FAT32 and FAT16 demonstrated simpler structures while still retaining useful deleted-file evidence.
 
 ---
 
 ## Disclaimer
 
 This project was performed in a controlled laboratory environment for educational and portfolio purposes. All files, disks, and deletion activity were intentionally created for forensic analysis.
+
+---
 
 ## Author
 
