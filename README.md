@@ -71,6 +71,56 @@ The investigation followed a structured forensic workflow:
 
 ---
 
+## Forensic Analysis
+
+### NTFS
+
+The NTFS investigation focused on the richer metadata and forensic structures available within the file system.
+
+Analysis included:
+
+* Active and deleted files
+* File-system metadata
+* `$RECYCLE.BIN`
+* `$I` and `$R` Recycle Bin artifacts
+* Hexadecimal file content
+* Residual data
+* Unallocated space
+
+NTFS provided additional forensic context surrounding file deletion, making it possible to examine both deleted content and supporting metadata.
+
+### FAT32
+
+The FAT32 investigation examined how deleted files are represented within a simpler file-system architecture.
+
+Analysis included:
+
+* Active files
+* Deleted directory entries
+* Residual file content
+* Hexadecimal data
+* File-system structures
+* Unallocated space
+
+Although FAT32 does not provide the same metadata structures available in NTFS, useful forensic evidence may still remain after deletion.
+
+### FAT16
+
+The FAT16 investigation provided an additional comparison with NTFS and FAT32.
+
+Analysis included:
+
+* Directory structures
+* Active and deleted files
+* Deleted-file indicators
+* Residual file content
+* Hexadecimal data
+* Unallocated space
+
+This analysis demonstrated that useful deleted-file evidence can persist even within older and comparatively simple file-system structures.
+
+---
+
 ## Key Skills Demonstrated
 
 * Digital forensics
