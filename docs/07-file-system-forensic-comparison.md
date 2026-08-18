@@ -1,38 +1,64 @@
-# File System Forensic Comparison: NTFS, FAT32, and FAT16
+# File-System Forensic Comparison
 
 ## Objective
 
-This phase of the laboratory compares the forensic artifacts observed across the three controlled test file systems:
+The final phase of this project compared the forensic artifacts observed across the NTFS, FAT32, and FAT16 test volumes using Exterro FTK Imager.
 
-- NTFS
-- FAT32
-- FAT16
-
-Each volume contained controlled test files and intentionally deleted artifacts. The volumes were examined using Exterro FTK Imager to determine how active files, deleted files, file-system metadata, Recycle Bin structures, and unallocated space appeared during forensic examination.
+The comparison focused on file-system structure, active files, deleted-file artifacts, Recycle Bin behavior, metadata, and unallocated space.
 
 ---
 
-## Evidence Sources
+## NTFS vs FAT32 vs FAT16
 
-Three physical test disks were examined.
-
-| Physical Drive | Volume | File System | Approximate Partition Size |
-|---|---|---|---:|
-| `\\.\PHYSICALDRIVE1` | `NTFS_LAB` | NTFS | 201 MB |
-| `\\.\PHYSICALDRIVE2` | `FAT32_LAB` | FAT32 | 201 MB |
-| `\\.\PHYSICALDRIVE3` | `FAT_LAB` | FAT16 | 201 MB |
-
-Using separate test volumes allowed similar file operations to be examined across different file-system structures.
+| Feature | NTFS | FAT32 | FAT16 |
+|---|---|---|---|
+| File-system structure | More complex | Simpler | Simpler |
+| Active file examination | Yes | Yes | Yes |
+| Deleted-file artifacts | Identified | Identified | Identified |
+| Recycle Bin artifacts | Present | Present | Present |
+| File metadata | Detailed | Available | Available |
+| Unallocated space | Identified | Identified | Identified |
 
 ---
 
-## Controlled Evidence
+## Key Observations
 
-The laboratory used known text files as controlled evidence.
+### NTFS
 
-Examples included:
+NTFS provided the most detailed file-system structure and metadata of the three examined file systems. FTK Imager allowed active files, deleted artifacts, Recycle Bin data, and unallocated space to be examined.
 
-```text
-evidence.txt
-notes.txt
-secret.txt
+### FAT32
+
+FAT32 used a simpler file-system structure while still retaining useful forensic evidence. Deleted files and their contents could remain recoverable after deletion.
+
+### FAT16
+
+FAT16 also demonstrated that file deletion does not necessarily remove file data immediately. Deleted-file entries, recoverable content, and unallocated space could still provide useful forensic evidence.
+
+---
+
+## Forensic Significance
+
+The examination demonstrated that forensic evidence can persist across different Windows-compatible file systems after a user deletes a file.
+
+Although NTFS, FAT32, and FAT16 organize data differently, FTK Imager was able to identify and examine active files, deleted artifacts, metadata, and unallocated space across the laboratory volumes.
+
+This highlights an important principle of digital forensics: deleting a file does not necessarily mean that its underlying data has been immediately destroyed.
+
+---
+
+## Project Conclusion
+
+This lab provided hands-on experience examining NTFS, FAT32, and FAT16 volumes with Exterro FTK Imager.
+
+The investigation demonstrated practical skills in:
+
+- Identifying file-system structures.
+- Examining active files and metadata.
+- Identifying deleted-file artifacts.
+- Inspecting recoverable deleted content.
+- Examining Recycle Bin artifacts.
+- Reviewing unallocated space.
+- Comparing forensic behavior across multiple file systems.
+
+The project demonstrates a foundational Windows file-system forensic workflow and the use of FTK Imager for evidence examination and deleted-file analysis.
