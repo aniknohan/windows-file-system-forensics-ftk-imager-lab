@@ -119,7 +119,7 @@ Key observations included:
 * **FAT32** retained useful deleted-file artifacts despite using a simpler file-system structure than NTFS.
 * **FAT16** also preserved evidence that could be identified and examined following controlled deletion.
 * Hexadecimal inspection helped validate file content and residual evidence.
-* Unallocated space contained data relevant to deleted-file examination.
+* Examination of unallocated space demonstrated how residual data may remain available for forensic analysis after file deletion.
 * The forensic artifacts available after deletion varied depending on the underlying file system.
 
 ---
