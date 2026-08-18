@@ -4,7 +4,7 @@
 
 The second file system examined in Exterro FTK Imager was the FAT32 test volume.
 
-The purpose of this phase was to examine the FAT32 file-system structure and identify active files, deleted-file artifacts, Recycle Bin data, and unallocated space. The results were then compared with the artifacts observed during the NTFS examination.
+The purpose of this phase was to examine the FAT32 file-system structure, identify active and deleted file artifacts, inspect recoverable file content and metadata, and review unallocated space for residual data.
 
 ---
 
