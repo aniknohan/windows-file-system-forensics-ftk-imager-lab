@@ -192,6 +192,14 @@ Comparing the same controlled deletion activity across all three file systems re
 Overall, this project strengthened my ability to examine Windows storage media, identify deleted-file artifacts, interpret file-system structures, validate evidence, and document forensic findings in a structured and repeatable manner.
 
 ---
+
+## Disclaimer
+
+This project was performed entirely within a **controlled laboratory environment** for educational and cybersecurity portfolio purposes.
+
+All files, disks, evidence, and deletion activity were intentionally created for forensic analysis. No real-world systems or third-party data were involved.
+
+---
 ## Author
 
 **Anik Nohan**
@@ -216,11 +224,5 @@ This hands-on Windows File System Forensics Investigation was completed to demon
 `Exterro FTK Imager` • `Windows Disk Management` • `Windows File Explorer` • `Notepad` • `Windows 11`
 
 ---
-
-## Disclaimer
-
-This project was performed entirely within a **controlled laboratory environment** for educational and cybersecurity portfolio purposes.
-
-All files, disks, evidence, and deletion activity were intentionally created for forensic analysis. No real-world systems or third-party data were involved.
 
 
