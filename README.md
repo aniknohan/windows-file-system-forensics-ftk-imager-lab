@@ -192,6 +192,30 @@ Comparing the same controlled deletion activity across all three file systems re
 Overall, this project strengthened my ability to examine Windows storage media, identify deleted-file artifacts, interpret file-system structures, validate evidence, and document forensic findings in a structured and repeatable manner.
 
 ---
+## Author
+
+**Anik Nohan**
+
+This hands-on Windows File System Forensics Investigation was completed to demonstrate practical skills in:
+
+- Windows file-system forensics
+- NTFS forensic analysis
+- FAT32 forensic analysis
+- FAT16 forensic analysis
+- Deleted-file investigation
+- NTFS `$RECYCLE.BIN` artifact analysis
+- `$I` and `$R` Recycle Bin artifact examination
+- File-system metadata analysis
+- Hexadecimal evidence inspection
+- Unallocated-space analysis
+- Comparative file-system analysis
+- Forensic evidence interpretation and documentation
+
+### Tools Used
+
+`Exterro FTK Imager` • `Windows Disk Management` • `Windows File Explorer` • `Notepad` • `Windows 11`
+
+---
 
 ## Disclaimer
 
@@ -199,11 +223,4 @@ This project was performed entirely within a **controlled laboratory environment
 
 All files, disks, evidence, and deletion activity were intentionally created for forensic analysis. No real-world systems or third-party data were involved.
 
----
-
-## Author
-
-**Anik Nohan**
-
-Cybersecurity | SOC | Digital Forensics Portfolio
 
