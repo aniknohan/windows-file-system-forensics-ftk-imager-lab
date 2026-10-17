@@ -34,6 +34,20 @@ The appropriate physical disk was selected for each laboratory volume.
 
 After loading, FTK Imager displayed the physical drives and their corresponding partitions in the Evidence Tree.
 
+The examination used **Exterro FTK Imager 8.2.0.59 SP1**. Each drive appeared with Evidence Type `Physical Disk`:
+
+| Evidence source | Volume | File system |
+|---|---|---|
+| `\\.\PHYSICALDRIVE1` | `NTFS_LAB` | NTFS |
+| `\\.\PHYSICALDRIVE2` | `FAT32_LAB` | FAT32 |
+| `\\.\PHYSICALDRIVE3` | `FAT_LAB` | FAT16 |
+
+![PHYSICALDRIVE1 loaded in FTK Imager](../evidence/screenshots/03-ftk-imager-evidence-loading/01-physicaldrive1-loaded-ftk-imager.png)
+
+![PHYSICALDRIVE2 loaded in FTK Imager](../evidence/screenshots/03-ftk-imager-evidence-loading/02-physicaldrive2-loaded-ftk-imager.png)
+
+![All three physical drives loaded in FTK Imager](../evidence/screenshots/03-ftk-imager-evidence-loading/03-physicaldrive3-loaded-ftk-imager.png)
+
 ---
 
 ## Forensic Examination Capability

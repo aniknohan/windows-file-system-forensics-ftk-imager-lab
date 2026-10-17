@@ -19,6 +19,23 @@ The comparison focused on file-system structure, active files, deleted-file arti
 | File metadata | Detailed | Available | Available |
 | Unallocated space | Identified | Identified | Identified |
 
+### Measured Results
+
+| Observation | NTFS | FAT32 | FAT16 |
+|---|---|---|---|
+| Evidence source | `\\.\PHYSICALDRIVE1` | `\\.\PHYSICALDRIVE2` | `\\.\PHYSICALDRIVE3` |
+| Volume label | `NTFS_LAB` | `FAT32_LAB` | `FAT_LAB` |
+| Cluster size | 4,096 bytes | 2,048 bytes | 4,096 bytes |
+| Key structures | `$MFT`, `$LogFile`, `$Bitmap`, `$MFTMirr` | `FAT1`, `FAT2`, `VBR`, reserved sectors | `FAT1`, `FAT2`, `VBR`, reserved sectors |
+| Deleted entry in directory | Not listed in root | Shown with red X, `0xE5` marker | Shown with red X; name became `!ecret.txt` |
+| Recycle Bin `$I`/`$R` pairs | 1 | 4 | 2 |
+| Recovered `secret.txt` content | `$RY5NXTE.txt`: `Going be a CISO` | `$RPI0LC4.TXT`: `Going be a CISO` | `$RLXOD2W.TXT`: `Going be a CISO` |
+| `evidence.txt` physical size (21-byte file) | 24 bytes | 2,048 bytes | 4,096 bytes |
+| Timestamps | UTC | Local time | Local time |
+| Unallocated regions | 3 | 2 | 3 |
+
+The deleted file's content was recovered intact on **all three** file systems. The differences lie in the surrounding metadata: NTFS kept rich system structures and stored small-file data resident in the MFT; FAT32 and FAT16 kept deleted directory entries visible (marked with `0xE5`) and allocated whole clusters to tiny files, leaving file slack.
+
 ---
 
 ## Key Observations
@@ -34,6 +51,10 @@ FAT32 used a simpler file-system structure while still retaining useful forensic
 ### FAT16
 
 FAT16 also demonstrated that file deletion does not necessarily remove file data immediately. Deleted-file entries, recoverable content, and unallocated space could still provide useful forensic evidence.
+
+### Timestamps
+
+NTFS timestamps in FTK Imager appeared four hours later than Windows File Explorer's local time (UTC−4), consistent with NTFS storing UTC. FAT32 and FAT16 timestamps matched local time, and FTK Imager reported `UTC Timestamps: False` for both. Examiners must account for this when building timelines across file systems.
 
 ---
 

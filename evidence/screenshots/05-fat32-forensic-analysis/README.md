@@ -4,7 +4,7 @@ This directory contains screenshots documenting the forensic examination of the 
 
 These screenshots support the forensic analysis documented in:
 
-`docs/05-fat32-forensic-analysis.md`
+[`docs/05-fat32-forensic-analysis.md`](../../../docs/05-fat32-forensic-analysis.md)
 
 ## Examination Scope
 
